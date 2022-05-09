@@ -8,7 +8,8 @@
 	import { Router, Link, Route } from "svelte-routing";
   
 	export let url = "";   
-	export let name;
+	export let name = "Guest";
+
   </script>
   
   <style>
