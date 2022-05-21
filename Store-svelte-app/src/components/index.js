@@ -4,5 +4,5 @@ import Header from "./Header.svelte";
 import Product from "./Product.svelte";
 import CartLength from "./CartLength.svelte";
 import Cart from "./Cart.svelte";
-
-export { Products, Footer, Header, Product, CartLength, Cart }
+import Disclaimer from "./Disclaimer.svelte";
+export { Products,Disclaimer, Footer, Header, Product, CartLength, Cart }

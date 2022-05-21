@@ -1,7 +1,7 @@
 <script>
   import {products, cart} from "../stores.js";
   import Cart from "./Cart.svelte";  
-  import Button from "./Button.svelte";
+  import CTAButton from "./CTAButton.svelte";
   import {Link} from "svelte-routing";
 
   export let location;
@@ -18,27 +18,42 @@
     $cart = [product,...$cart]
   }
 </script>
-
 <style>
+  .product-list > div { 
+    border: 1px solid #c4c4c4;   
+    padding: 10px; 
+  }
+  
+  .image { 
+    height: 150px; 
+    width: auto; 
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+  }
+  
+  .cta { 
+    display: flex; 
+    justify-content: space-between; 
+  }
 </style>
-
-
 <div class="product-list">
   {#await $products}
     <p>...loading products</p>
   {:then} 
-    {#each $products as product}
+      {#each $products as product}
       <div>
-        <img src="{product.image}" alt="">
-        <h4><Link to="product/{product.id}">{product.name}</Link></h4>
-        <div class="cta">
+        <div class="image" style="background-image: url({product.image})"></div>
+        <h4><Link to="product/{product.id}">
+    {product.name}</Link></h4>
           <p>${product.price}</p>
-          <Button on:click={() => addToCart(product)}>
+        <div class="cta">
+          <CTAButton on:click={() => addToCart(product)}>
             Add to cart
-          </Button>
+          </CTAButton>
         </div>
       </div>
-    {/each}
-  {/await}
-</div>
-<Cart />
+      {/each}
+      {/await}
+    </div> <br>
+    <Cart /><br>

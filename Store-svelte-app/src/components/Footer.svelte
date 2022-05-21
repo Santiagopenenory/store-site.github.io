@@ -8,10 +8,21 @@
     fill: "#fff",
   }  
 </script>
-
-<style>
+<style> 
+footer { 
+  background: linear-gradient(360deg, #594c59 0%, #343334 100%); color: #fff; display: flex; 
+  justify-content: space-around; 
+} 
+footer > div { 
+  min-height: 100px;
+  display: flex;      
+  justify-content: center; 
+  flex-direction: column; 
+} 
+footer div span a { 
+  margin-right: 5px; 
+  } 
 </style>
-
 <footer>
   <div>
     <span>&copy; Small Coffee Shop 2021</span>

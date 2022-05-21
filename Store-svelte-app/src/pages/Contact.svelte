@@ -1,5 +1,5 @@
 <script>
-    import Button from '../components/Button.svelte'
+    import Button from '../components/CTAButton.svelte'
     let formValue = {
         name:"",
         email:"",
@@ -29,7 +29,7 @@
                 bind:value={formValue.yourmessage} placeholder="Enter Message"></textarea> <br>
             <span class="submitbutton">
                 <Button type="submit">submit</Button>
-            </span>
+            </span><br>
         </form>
       </div>
 </section>
