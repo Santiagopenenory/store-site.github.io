@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@rollup/plugin-json": "^4.1.0",
+    "modal-overlay": "^1.0.1",
     "sirv-cli": "^2.0.0",
     "svelte-inline-svg": "^1.1.3"
   }

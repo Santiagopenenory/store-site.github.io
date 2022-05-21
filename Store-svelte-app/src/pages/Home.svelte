@@ -1,6 +1,26 @@
 <style>
+
 </style>
-    
+<script>
+  import Modal from "modal-overlay";
+  let display = true;
+  const close = () => {
+    display = false;
+  };
+  const open = () => {
+    display = true;
+  }
+</script>    
+{#if display}
+      <Modal on:close={close}> 
+        <h1>Get 10% off your first order!</h1> 
+        <p> 
+          <span>Use code 10PERCENT at checkout</span> 
+          <img src="images/3.png" alt="image3" /> 
+        </p> 
+        <button on:click={close}>X</button> 
+      </Modal> 
+    {/if}
     <section>
       <!-- image from https://www.pexels.com/photo/beans-beverage-black-coffee-breakfast-373888/ -->
       <span class="welcome">Welcome to Small Coffee Company - high quality great coffee, roasted with love in the heart of Yorkshire</span>
