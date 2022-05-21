@@ -14,6 +14,7 @@
   export let name = "Guest";
   import { getContext } from "svelte"; 
   const { loggedIn } = getContext('key');
+  $: total = $cart.reduce((sum, item) => sum + item.price * item.quantity, 0)
 </script>
 
 <style>
@@ -32,7 +33,7 @@
       <div>Hi,Guest | Login</div>
     {/if}
     <span><InlineSVG src="/images/shoppingcart.svg" {...attributesCart} /></span>
-    <span>{$cart.length} items: ${totalprice}</span>
+    <span>{$cart.length} items: ${total}</span>
   </div>
 </header>
 

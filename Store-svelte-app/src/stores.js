@@ -10,7 +10,6 @@ let products = readable(myjson.default);
 let totalprice = derived(
         cart,
         ($cart) =>{
-            console.log("estoy aca")
             let price = 0;
             $cart.forEach(e => price = price + e.price);
             return price;
