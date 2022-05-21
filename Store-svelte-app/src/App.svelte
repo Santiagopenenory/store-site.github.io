@@ -1,5 +1,5 @@
 <script>
-	import { Products, Footer, Header, Product, CartLength, Cart } from "./components";
+	import { Products, Footer, Header, Product, Cart } from "./components";
   
 	import About from "./pages/About.svelte";
 	import Home from "./pages/Home.svelte";
@@ -33,12 +33,12 @@
 	  <Link to="/contact">Contact us</Link>
 	</nav>
 	<main>
-	  <Route path="/" component="{Home}" />
-	  <Route path="products" component="{Products}" />
-	  <Route path="about" component="{About}" />
-	  <Route path="coffee" component="{Coffee}" />
-	  <Route path="/product/:id" component="{Product}" />
-	  <Route path="contact" component="{Contact}" />
+		<Route path="/"><Home/></Route> 
+		<Route path="products"><Products /></Route> 
+		<Route path="about"><About /></Route> 
+		<Route path="coffee"><Coffee /></Route> 
+		<Route path="contact"><Contact /></Route>
+		<Route path="/product/:id"><Product/></Route>
 	</main>
   </Router>
   <Footer />

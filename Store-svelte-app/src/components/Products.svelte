@@ -2,6 +2,7 @@
   import {products, cart} from "../stores.js";
   import Cart from "./Cart.svelte";  
   import Button from "./Button.svelte";
+  import {Link} from "svelte-routing";
 
   export let location;
   
@@ -29,7 +30,7 @@
     {#each $products as product}
       <div>
         <img src="{product.image}" alt="">
-        <h4><a href="product/{product.id}">{product.name}</a></h4>
+        <h4><Link to="product/{product.id}">{product.name}</Link></h4>
         <div class="cta">
           <p>${product.price}</p>
           <Button on:click={() => addToCart(product)}>
