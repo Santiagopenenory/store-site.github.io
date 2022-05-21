@@ -14,7 +14,7 @@
           return;
         }
     }
-    $cart = [...$cart, product]
+    $cart = [product,...$cart]
   }
 </script>
 
@@ -23,17 +23,21 @@
 
 
 <div class="product-list">
-  {#each $products as product}
-    <div>
-      <div class="image" style="background-image: url({product.image})"></div>
-      <h4><a href="product/{product.id}">{product.name}</a></h4>
-      <div class="cta">
-        <p>${product.price}</p>
-        <Button on:click={() => addToCart(product)}>
-          Add to cart
-        </Button>
+  {#await $products}
+    <p>...loading products</p>
+  {:then} 
+    {#each $products as product}
+      <div>
+        <img src="{product.image}" alt="">
+        <h4><a href="product/{product.id}">{product.name}</a></h4>
+        <div class="cta">
+          <p>${product.price}</p>
+          <Button on:click={() => addToCart(product)}>
+            Add to cart
+          </Button>
+        </div>
       </div>
-    </div>
-  {/each}
+    {/each}
+  {/await}
 </div>
 <Cart />

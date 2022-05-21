@@ -1,0 +1,23 @@
+[{
+    "id": 1,
+    "name": "Peruvian Blend",
+    "price":18,
+    "image":"/images/1.png",
+    "quantity":0
+  },
+  { 
+    "id": 2,
+    "name": "African Inca", 
+    "price":18,
+    "image":"/images/1.png",
+    "quantity":0
+  }, 
+  { "id": 3, 
+    "name": "Ristretto" ,
+    "price":18,
+    "image":"/images/1.png",
+    "quantity":0
+  }
+]
+  
+    

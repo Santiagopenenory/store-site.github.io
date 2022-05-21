@@ -6,9 +6,16 @@
 	import Coffee from "./pages/Coffee.svelte";
   
 	import { Router, Link, Route } from "svelte-routing";
-  
+	import { setContext } from "svelte";
+	export let name;
+	let loggedIn;
+	if (name == "") { 
+		loggedIn = false; 
+	}else { 
+		loggedIn = true; 
+	}
+	setContext('key', { loggedIn });
 	export let url = "";   
-	export let name = "Guest";
 
   </script>
   

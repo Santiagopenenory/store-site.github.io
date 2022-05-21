@@ -12,7 +12,8 @@
     height: 30
   }
   export let name = "Guest";
-
+  import { getContext } from "svelte"; 
+  const { loggedIn } = getContext('key');
 </script>
 
 <style>
@@ -25,7 +26,11 @@
     <span>Small Coffee Company</span>
   </div>
   <div class="basket">
-    <div>Hi,{name}</div>
+    {#if loggedIn}
+      <div>Hi,{name} | Logout</div>
+    {:else}
+      <div>Hi,Guest | Login</div>
+    {/if}
     <span><InlineSVG src="/images/shoppingcart.svg" {...attributesCart} /></span>
     <span>{$cart.length} items: ${totalprice}</span>
   </div>
