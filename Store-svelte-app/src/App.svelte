@@ -4,6 +4,7 @@
 	import About from "./pages/About.svelte";
 	import Home from "./pages/Home.svelte";
 	import Coffee from "./pages/Coffee.svelte";
+	import Contact from "./pages/Contact.svelte";
   
 	import { Router, Link, Route } from "svelte-routing";
 	import { setContext } from "svelte";
@@ -29,6 +30,7 @@
 	  <Link to="/products">Shop</Link>
 	  <Link to="/about">Our Story</Link>
 	  <Link to="/coffee">Our Coffee</Link>
+	  <Link to="/contact">Contact us</Link>
 	</nav>
 	<main>
 	  <Route path="/" component="{Home}" />
@@ -36,6 +38,7 @@
 	  <Route path="about" component="{About}" />
 	  <Route path="coffee" component="{Coffee}" />
 	  <Route path="/product/:id" component="{Product}" />
+	  <Route path="contact" component="{Contact}" />
 	</main>
   </Router>
   <Footer />
