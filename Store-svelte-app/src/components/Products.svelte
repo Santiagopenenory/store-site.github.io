@@ -24,6 +24,12 @@
     padding: 10px; 
   }
   
+  .product-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    grid-row-gap: 20px;
+  }
   .image { 
     height: 150px; 
     width: auto; 
@@ -41,11 +47,12 @@
   {#await $products}
     <p>...loading products</p>
   {:then} 
-      {#each $products as product}
+    {#each $products as product}
       <div>
         <div class="image" style="background-image: url({product.image})"></div>
         <h4><Link to="product/{product.id}">
-    {product.name}</Link></h4>
+          {product.name}</Link>
+        </h4>
           <p>${product.price}</p>
         <div class="cta">
           <CTAButton on:click={() => addToCart(product)}>
@@ -54,6 +61,6 @@
         </div>
       </div>
       {/each}
-      {/await}
-    </div> <br>
-    <Cart /><br>
+  {/await}
+</div>
+<Cart />

@@ -37,13 +37,9 @@
       <p>Vivamus euismod arcu non velit pulvinar, in egestas mauris tincidunt. Vivamus eget elit non est semper elementum. Quisque turpis elit, tristique eu elit at, rhoncus ullamcorper eros. Integer efficitur efficitur libero, venenatis rhoncus sapien posuere ut. Nulla semper, magna at luctus luctus, orci lacus scelerisque erat, id consequat quam mauris sed neque.</p>
     </section>
 <style> 
-  @font-face { 
-    font-family: 'black_jackregular';
-    src: url('/fonts/blackjack.woff') format('woff');    font-weight: normal; 
-    font-style: normal; 
-  } 
+  
   .welcome { 
-    font-family: 'black_jackregular', sans-serif;
-    font-size: 30px; width: 50%; 
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 35px; width: 50%; 
   } 
 </style>
