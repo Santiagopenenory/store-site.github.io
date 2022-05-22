@@ -1,1 +1,1 @@
-# Store-site
+# Coffe-Store Site using Svelte
