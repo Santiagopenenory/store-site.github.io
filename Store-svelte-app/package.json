@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@rollup/plugin-json": "^4.1.0",
+    "gh-pages": "^4.0.0",
     "modal-overlay": "^1.0.1",
     "sass": "^1.52.1",
     "sirv-cli": "^2.0.0",
