@@ -10,7 +10,7 @@
     
       <!-- image from https://www.pexels.com/photo/beans-beverage-black-coffee-breakfast-373888/ -->
       <div id="banner">
-        <img src="images/banner.jpg" alt="banner" />
+        <img src="./images/banner.jpg" alt="banner" />
       </div>
     
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed odio id nulla gravida rhoncus. Suspendisse potenti. In volutpat nibh non tellus laoreet, vitae faucibus ipsum sollicitudin. Duis viverra pulvinar tempus. Phasellus odio nunc, imperdiet vitae diam quis, sollicitudin pretium massa. Donec molestie mauris id semper sagittis.</p>

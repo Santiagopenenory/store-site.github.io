@@ -12,7 +12,7 @@
       <Modal on:close={close}> 
         <h1>Get 10% off your first order!</h1> 
         <p> 
-          <img src="images/3.png" alt="image3" /><br>
+          <img src="./images/3.png" alt="image3" /><br>
           <span>Use code 10PERCENT at checkout</span> 
         </p><br>
         <button on:click={close}>X</button> 
@@ -22,7 +22,7 @@
       <!-- image from https://www.pexels.com/photo/beans-beverage-black-coffee-breakfast-373888/ -->
       <span class="welcome">Welcome to Small Coffee Company - high quality great coffee, roasted with love in the heart of Yorkshire</span>
       <div id="banner">
-        <img src="images/banner.jpg" alt="banner" />
+        <img src="./images/banner.jpg" alt="banner" />
       </div>
     
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed odio id nulla gravida rhoncus. Suspendisse potenti. In volutpat nibh non tellus laoreet, vitae faucibus ipsum sollicitudin. Duis viverra pulvinar tempus. Phasellus odio nunc, imperdiet vitae diam quis, sollicitudin pretium massa. Donec molestie mauris id semper sagittis.</p>
